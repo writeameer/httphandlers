@@ -5,7 +5,7 @@ Some sample http middleware
 
 ## Authentication Handler
 
-- [authenticationHandler](./handlers/authenticationHandler.go) authenticates against LDAP
+[authenticationHandler](./handlers/authenticationHandler.go) authenticates against LDAP
 
 
 ### Setup credential file
@@ -68,7 +68,7 @@ unauthorized:LDAP Result Code 49 "Invalid Credentials"...
 
 ## Reverse Proxy  Handler
 
-Just forwards requests to the host specifed via `originHost`. In the following example, `google.com` is set as the origin host so all traffic to localhost:8080 will be proxied to Google.
+[reverseProxyHandler](./handlers/reverseProxyHandler.go) just forwards requests to `originHost`. In the following example, `google.com` is set as the origin host so all traffic to localhost:8080 will be proxied to Google.
 
 ```
 func main() {
