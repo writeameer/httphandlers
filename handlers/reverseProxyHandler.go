@@ -15,7 +15,7 @@ func ReverseProxyHandler(originHost string, next ...http.Handler) http.Handler {
 			req.Header.Add("X-Forwarded-Host", req.Host)
 			req.Header.Add("X-Origin-Host", originHost)
 			req.Host = originHost
-			//req.URL.Scheme = "https"
+			req.URL.Scheme = "http"
 			req.URL.Host = originHost
 		},
 	}
